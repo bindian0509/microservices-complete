@@ -13,7 +13,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>microservices-complete</name>
 	<description>A grand microservices project in Spring and Java </description>
-	<packaging>pom</packaging>
+    <modules>
+        <module>twitter-to-kafka-service</module>
+    </modules>
+    <packaging>pom</packaging>
 
 	<properties>
 		<java.version>17</java.version>
