@@ -1,0 +1,69 @@
+2023-08-19 18:23:12 [main] INFO  c.b.m.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 20.0.2 with PID 70572 (/Users/bharatverma/code/personal/java/microservices-complete/twitter-to-kafka-service/target/classes started by bharatverma in /Users/bharatverma/code/personal/java/microservices-complete)
+2023-08-19 18:23:12 [main] INFO  c.b.m.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-19 18:23:12 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterToKafkaServiceApplication': Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.bharat.microservices.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-19 18:23:12 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-19 18:23:12 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.bharat.microservices.twitter.to.kafka.service.TwitterToKafkaServiceApplication required a bean of type 'com.bharat.microservices.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.bharat.microservices.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData' in your configuration.
+
+2023-08-19 18:23:50 [main] INFO  c.b.m.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 20.0.2 with PID 70707 (/Users/bharatverma/code/personal/java/microservices-complete/twitter-to-kafka-service/target/classes started by bharatverma in /Users/bharatverma/code/personal/java/microservices-complete)
+2023-08-19 18:23:50 [main] INFO  c.b.m.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-19 18:23:50 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterToKafkaServiceApplication': Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.bharat.microservices.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-19 18:23:50 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-19 18:23:50 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.bharat.microservices.twitter.to.kafka.service.TwitterToKafkaServiceApplication required a bean of type 'com.bharat.microservices.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.bharat.microservices.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData' in your configuration.
+
+2023-08-19 18:24:07 [main] INFO  c.b.m.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 20.0.2 with PID 70755 (/Users/bharatverma/code/personal/java/microservices-complete/twitter-to-kafka-service/target/classes started by bharatverma in /Users/bharatverma/code/personal/java/microservices-complete)
+2023-08-19 18:24:07 [main] INFO  c.b.m.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-19 18:24:08 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterToKafkaServiceApplication': Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.bharat.microservices.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-08-19 18:24:08 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-19 18:24:08 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.bharat.microservices.twitter.to.kafka.service.TwitterToKafkaServiceApplication required a bean of type 'com.bharat.microservices.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.bharat.microservices.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData' in your configuration.
+
+2023-08-19 18:26:39 [main] INFO  c.b.m.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 20.0.2 with PID 71470 (/Users/bharatverma/code/personal/java/microservices-complete/twitter-to-kafka-service/target/classes started by bharatverma in /Users/bharatverma/code/personal/java/microservices-complete)
+2023-08-19 18:26:39 [main] INFO  c.b.m.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-19 18:26:39 [main] INFO  c.b.m.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.322 seconds (process running for 0.528)
+2023-08-19 18:26:39 [main] INFO  c.b.m.t.t.k.s.TwitterToKafkaServiceApplication - App starts...
+2023-08-19 18:26:39 [main] INFO  c.b.m.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]
+2023-08-19 18:26:39 [main] INFO  c.b.m.t.t.k.s.TwitterToKafkaServiceApplication - Hello microservices!
