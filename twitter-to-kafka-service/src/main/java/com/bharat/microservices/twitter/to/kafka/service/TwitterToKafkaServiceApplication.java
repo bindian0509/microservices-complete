@@ -1,7 +1,7 @@
 package com.bharat.microservices.twitter.to.kafka.service;
 
 
-import com.bharat.microservices.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData;
+import com.bharat.microservices.config.TwitterToKafkaServiceConfigData;
 import com.bharat.microservices.twitter.to.kafka.service.runner.StreamRunner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

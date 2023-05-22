@@ -34,9 +34,8 @@
             <artifactId>json</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
+            <groupId>com.bharat.microservices</groupId>
+            <artifactId>app-config-data</artifactId>
         </dependency>
     </dependencies>
 

@@ -5,7 +5,7 @@ package com.bharat.microservices.twitter.to.kafka.service.runner.impl;
  * @created Saturday, 19 August 2023
  */
 
-import com.bharat.microservices.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData;
+import com.bharat.microservices.config.TwitterToKafkaServiceConfigData;
 import com.bharat.microservices.twitter.to.kafka.service.listener.TwitterKafkaStatusListener;
 import com.bharat.microservices.twitter.to.kafka.service.runner.StreamRunner;
 import jakarta.annotation.PreDestroy;

@@ -1,14 +1,14 @@
-package com.bharat.microservices.twitter.to.kafka.service.config;
-
+package com.bharat.microservices.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
+
 /*
  * @author Bharat V. <bindian0509@gmail.com>
- * @created Saturday, 19 August 2023
+ * @created Monday, 28 August 2023
  */
 @Data
 @Configuration
