@@ -5,16 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.bharat.microservices</groupId>
-        <artifactId>microservices-complete</artifactId>
+        <artifactId>kafka</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>kafka</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>kafka-model</module>
-        <module>kafka-admin</module>
-    </modules>
+    <artifactId>kafka-admin</artifactId>
 
     <properties>
         <maven.compiler.source>20</maven.compiler.source>
