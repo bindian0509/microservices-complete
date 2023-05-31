@@ -28,6 +28,7 @@
 		<lombok.version>1.18.28</lombok.version>
 		<httpclient.version>4.5.14</httpclient.version>
 		<json.version>20230227</json.version>
+		<avro.version>1.11.1</avro.version>
 	</properties>
 
 	<dependencyManagement>
@@ -78,6 +79,12 @@
 				<groupId>org.json</groupId>
 				<artifactId>json</artifactId>
 				<version>${json.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.avro</groupId>
+				<artifactId>avro</artifactId>
+				<version>${avro.version}</version>
 			</dependency>
 
 		</dependencies>
