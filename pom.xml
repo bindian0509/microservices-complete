@@ -99,6 +99,19 @@
 				<artifactId>spring-kafka</artifactId>
 				<version>${spring-kafka.version}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.retry</groupId>
+				<artifactId>spring-retry</artifactId>
+				<version>${spring-retry.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-webflux</artifactId>
+				<version>${spring-boot.version}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
