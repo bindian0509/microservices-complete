@@ -98,6 +98,8 @@ public class KafkaAdminClient {
     }
 
     private HttpStatus getSchemaRegistryStatus() {
+        AtomicReference<HttpStatus> status = new AtomicReference<>(HttpStatus.SERVICE_UNAVAILABLE);
+
         Mono<HttpStatus> responseStatusMono = webClient
             .get()
             .uri(kafkaConfigData.getSchemaRegistryUrl())
@@ -105,7 +107,6 @@ public class KafkaAdminClient {
             .toBodilessEntity()
             .map(response -> (HttpStatus) response.getStatusCode());
 
-        AtomicReference<HttpStatus> status = new AtomicReference<>(HttpStatus.SERVICE_UNAVAILABLE);
         // Subscribe to the response status Mono
         responseStatusMono.subscribe(status::set);
         return status.get();
