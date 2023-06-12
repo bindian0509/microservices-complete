@@ -58,4 +58,3 @@ public class KafkaProducerConfig<K extends Serializable, V extends SpecificRecor
         return new KafkaTemplate<>(producerFactory());
     }
 }
-

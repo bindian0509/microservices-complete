@@ -5,8 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.bharat.microservices</groupId>
-        <artifactId>kafka</artifactId>
+        <artifactId>microservices-complete</artifactId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>kafka-admin</artifactId>

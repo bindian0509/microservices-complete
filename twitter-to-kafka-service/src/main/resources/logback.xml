@@ -31,12 +31,12 @@
     </appender>
 
 
-    <logger name="com.bharat.microservices" level="info" additivity="false">
+    <logger name="com.bharat.microservices" level="debug" additivity="false">
         <appender-ref ref="FILE"/>
         <appender-ref ref="STDOUT"/>
     </logger>
 
-    <root level="info">
+    <root level="debug">
         <appender-ref ref="FILE"/>
         <appender-ref ref="STDOUT"/>
     </root>

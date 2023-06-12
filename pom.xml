@@ -18,6 +18,9 @@
         <module>app-config-data</module>
         <module>kafka</module>
 		<module>common-config</module>
+		<module>kafka/kafka-model</module>
+		<module>kafka/kafka-admin</module>
+		<module>kafka/kafka-producer</module>
 	</modules>
     <packaging>pom</packaging>
 
