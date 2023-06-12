@@ -9,9 +9,6 @@ package com.bharat.microservices.kafka.admin.client;
 import com.bharat.microservices.config.KafkaConfigData;
 import com.bharat.microservices.config.RetryConfigData;
 import com.bharat.microservices.kafka.admin.exception.KafkaClientException;
-
-import reactor.core.publisher.Mono;
-
 import org.apache.kafka.clients.admin.AdminClient;
 import org.apache.kafka.clients.admin.CreateTopicsResult;
 import org.apache.kafka.clients.admin.NewTopic;
@@ -23,11 +20,11 @@ import org.springframework.retry.RetryContext;
 import org.springframework.retry.support.RetryTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Mono;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 
 @Component
@@ -98,18 +95,13 @@ public class KafkaAdminClient {
     }
 
     private HttpStatus getSchemaRegistryStatus() {
-        AtomicReference<HttpStatus> status = new AtomicReference<>(HttpStatus.SERVICE_UNAVAILABLE);
-
-        Mono<HttpStatus> responseStatusMono = webClient
+        return webClient
             .get()
             .uri(kafkaConfigData.getSchemaRegistryUrl())
             .retrieve()
             .toBodilessEntity()
-            .map(response -> (HttpStatus) response.getStatusCode());
-
-        // Subscribe to the response status Mono
-        responseStatusMono.subscribe(status::set);
-        return status.get();
+            .map(response -> (HttpStatus) response.getStatusCode())
+                .block();
     }
 
 
