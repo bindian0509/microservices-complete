@@ -37,8 +37,9 @@ public class TwitterKafkaStatusListener extends StatusAdapter {
 
     @Override
     public void onStatus(Status status) {
-        LOG.info("Received status text {} sending to kafka topic {}", status.getText(), kafkaConfigData.getTopicName());
+        LOG.info("Received status text ||-> {} <-|| sending to kafka topic ||-> {} <-||", status.getText(), kafkaConfigData.getTopicName());
         TwitterAvroModel twitterAvroModel = twitterStatusToAvroTransformer.getTwitterAvroModelFromStatus(status);
         kafkaProducer.send(kafkaConfigData.getTopicName(), twitterAvroModel.getUserId(), twitterAvroModel);
+        LOG.info("Message Sent : 👍");
     }
 }

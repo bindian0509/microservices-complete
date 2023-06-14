@@ -6,9 +6,9 @@ twitter-to-kafka-service:
     - Elasticsearch
   welcome-message: Hello Java + Spring Microservices!
   enable-mock-tweets: true
-  mock-min-tweet-length: 5
-  mock-max-tweet-length: 15
-  mock-sleep-ms: 2500
+  mock-min-tweet-length: 9
+  mock-max-tweet-length: 27
+  mock-sleep-ms: 5000
 
 retry-config:
   initial-interval-ms: 1000

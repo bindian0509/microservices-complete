@@ -14,10 +14,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
-import org.springframework.util.concurrent.ListenableFuture;
-import org.springframework.util.concurrent.ListenableFutureCallback;
 
 import javax.annotation.PreDestroy;
+import java.util.concurrent.CompletableFuture;
 
 @Service
 public class TwitterKafkaProducer implements KafkaProducer<Long, TwitterAvroModel> {
@@ -33,8 +32,8 @@ public class TwitterKafkaProducer implements KafkaProducer<Long, TwitterAvroMode
     @Override
     public void send(String topicName, Long key, TwitterAvroModel message) {
         LOG.info("Sending message='{}' to topic='{}'", message, topicName);
-        ListenableFuture<SendResult<Long, TwitterAvroModel>> kafkaResultFuture =
-                (ListenableFuture<SendResult<Long, TwitterAvroModel>>) kafkaTemplate.send(topicName, key, message);
+        CompletableFuture<SendResult<Long, TwitterAvroModel>> kafkaResultFuture =
+                kafkaTemplate.send(topicName, key, message);
         addCallback(topicName, message, kafkaResultFuture);
     }
 
@@ -47,8 +46,21 @@ public class TwitterKafkaProducer implements KafkaProducer<Long, TwitterAvroMode
     }
 
     private void addCallback(String topicName, TwitterAvroModel message,
-                             ListenableFuture<SendResult<Long, TwitterAvroModel>> kafkaResultFuture) {
-        kafkaResultFuture.addCallback(new ListenableFutureCallback<>() {
+                             CompletableFuture<SendResult<Long, TwitterAvroModel>> kafkaResultFuture) {
+        kafkaResultFuture.whenComplete((result, ex) -> {
+            if (ex == null) {
+                RecordMetadata metadata = result.getRecordMetadata();
+                LOG.info("Received new metadata. Topic: {}; Partition {}; Offset {}; Timestamp {}, at time {}",
+                        metadata.topic(),
+                        metadata.partition(),
+                        metadata.offset(),
+                        metadata.timestamp(),
+                        System.nanoTime());
+            } else {
+                LOG.error("Error : {} -> while sending message {} to topic {}", ex.getMessage(),  message.toString(), topicName);
+            }
+        });
+        /*kafkaResultFuture.addCallback(new ListenableFutureCallback<>() {
             @Override
             public void onFailure(Throwable throwable) {
                 LOG.error("Error while sending message {} to topic {}", message.toString(), topicName, throwable);
@@ -64,7 +76,7 @@ public class TwitterKafkaProducer implements KafkaProducer<Long, TwitterAvroMode
                         metadata.timestamp(),
                         System.nanoTime());
             }
-        });
+        });*/
     }
 }
 
