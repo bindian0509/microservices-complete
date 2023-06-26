@@ -13,7 +13,9 @@ spring:
     config:
       server:
         git:
-          uri: file://Users/bharatverma/code/personal/java/config-server-repository
+          uri: https://github.com/bindian0509/spring-cloud-config-server-repository.git
+          username: bindian0509
+          password: <gh-token>
           default-label : master
           clone-on-start: true
     fail-fast: true
