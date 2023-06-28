@@ -13,7 +13,7 @@ spring:
         git:
           uri: https://github.com/bindian0509/spring-cloud-config-server-repository.git
           username: bindian0509
-          password: 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
+          password: ENC(MGtbPzWpQBzKaMkNOdUKY1jf+Ze/p8aPjs58AtXlJgd+xN59nC6bBvU9myolUPe1L240qhijFY/rWQJ2yMpyXACZppaGHazIgfVx1SzFjPlRL6Y5eC8ruoqPqEqBZ6jFEFXoblkTCMB5PImlR7GwBYD3/IH2dctk76qwB49345w=)
           default-label : master
           clone-on-start: true
     fail-fast: true
