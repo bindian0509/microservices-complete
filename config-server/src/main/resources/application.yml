@@ -1,11 +1,9 @@
 server:
   port: 8888
-
 logging:
   level:
     root: INFO
     org.spring.framework.cloud.config: DEBUG
-
 spring:
   application:
     name: configserver
@@ -15,12 +13,14 @@ spring:
         git:
           uri: https://github.com/bindian0509/spring-cloud-config-server-repository.git
           username: bindian0509
-          password: <gh-token>
+          password: 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
           default-label : master
           clone-on-start: true
     fail-fast: true
-
   security:
-    name: spring_cloud_user
-    password: springCloud_Pwd!
-
+    user:
+      name: spring_cloud_user
+      password: ENC(isWgBV5UFp/JH450ZJIRwSScC96KxsDlErIvT+BCnPfT7ctKoZkAIudeviXGVN+3c+6Rpo8j45Z/PfZJMt+Ggg==)
+jasypt:
+  encryptor:
+    password: Demo_Pwd!2023

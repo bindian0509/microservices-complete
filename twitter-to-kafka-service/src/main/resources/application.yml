@@ -1,12 +1,18 @@
+logging:
+  level:
+    org.springframework.cloud.config: DEBUG
 spring:
   application:
     name: twitter-to-kafka-service
   profiles:
     active: twitter_to_kafka
   config:
-    import: configserver:http://localhost:8888
+    import: configserver:http://localhost:8888/
   cloud:
     config:
       name: twitter-to-kafka-service,config-client
       username: spring_cloud_user
-      password: springCloud_Pwd!
+      password: ENC(isWgBV5UFp/JH450ZJIRwSScC96KxsDlErIvT+BCnPfT7ctKoZkAIudeviXGVN+3c+6Rpo8j45Z/PfZJMt+Ggg==)
+jasypt:
+  encryptor:
+    password: Demo_Pwd!2023

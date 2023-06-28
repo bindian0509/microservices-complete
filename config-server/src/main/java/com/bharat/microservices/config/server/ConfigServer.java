@@ -9,6 +9,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  * @created Wednesday, 06 September 2023
  */
 @EnableConfigServer
+//@SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 @SpringBootApplication
 public class ConfigServer {
     public static void main(String[] args) {
