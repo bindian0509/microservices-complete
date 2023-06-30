@@ -24,4 +24,6 @@ spring:
     user:
       name: spring_cloud_user
       password: '{cipher}578c0abc7e5b47a2654abf18f815aed4b08deef82d0a02d7aa0bad459ee471a047cfd00f3494bf4da7849550f2563ad9'
-
+# this will be passed via run configuration as a parameter to keep values secured (method used - JCE)
+encrypt:
+  key:

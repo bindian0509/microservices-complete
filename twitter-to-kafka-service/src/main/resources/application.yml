@@ -10,3 +10,6 @@ spring:
       name: twitter-to-kafka-service,config-client
       username: spring_cloud_user
       password: '{cipher}5c0f648598af2ec3d61670c63753495e7f81f90da160ccbb2f794558b7d579dd0246a81a65320d4f623ef47839aa9dcc'
+# this will be passed via run configuration as a parameter to keep values secured (method used - JCE)
+encrypt:
+  key:
