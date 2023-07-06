@@ -9,4 +9,8 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>kafka</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>kafka-consumer</module>
+    </modules>
 </project>
