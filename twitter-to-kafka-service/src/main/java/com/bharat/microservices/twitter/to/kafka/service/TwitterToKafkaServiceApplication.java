@@ -10,7 +10,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 import java.util.Arrays;
-
+/*
+ * @author Bharat V. <bindian0509@gmail.com>
+ * @created Saturday, 19 August 2023
+ */
 @SpringBootApplication
 @ComponentScan(basePackages = "com.bharat.microservices")
 public class TwitterToKafkaServiceApplication implements CommandLineRunner {

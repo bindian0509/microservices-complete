@@ -6,7 +6,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
-
+/*
+ * @author Bharat V. <bindian0509@gmail.com>
+ * @created Saturday, 19 August 2023
+ */
 @Data
 @Configuration
 @ConfigurationProperties(prefix = "twitter-to-kafka-service")
