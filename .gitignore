@@ -34,3 +34,4 @@ build/
 logs/
 .mvn
 docker-compose/docker-logs/
+config-server-repository/
