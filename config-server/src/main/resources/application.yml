@@ -15,12 +15,13 @@ spring:
         git:
           uri: https://github.com/bindian0509/spring-cloud-config-server-repository.git
           username: bindian0509
-          password: <gh-token>
+          password: '{cipher}a33655b0d101dcf55a9a3cb2c61829f42e080e6819867f7c3ce9005f048bd0e2b64006f2d718d651b2fd9726ba078139edb449f9140165ef7f9bcd2cf8b811badb3d00eaa2570929be46b43be0253db8262245b12226d12f83cc36f0f5df7f314c10a9ea2d46f3821a0b2fa2457f168b'
           default-label : master
           clone-on-start: true
     fail-fast: true
 
   security:
-    name: spring_cloud_user
-    password: springCloud_Pwd!
+    user:
+      name: spring_cloud_user
+      password: '{cipher}578c0abc7e5b47a2654abf18f815aed4b08deef82d0a02d7aa0bad459ee471a047cfd00f3494bf4da7849550f2563ad9'
 
