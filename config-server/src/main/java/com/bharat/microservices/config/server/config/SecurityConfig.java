@@ -14,7 +14,11 @@ public class SecurityConfig {
 
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
-        return (web) -> web.ignoring().requestMatchers("/encrypt/**", "/decrypt/**");
+        return (web) -> web.ignoring().requestMatchers(
+                "/encrypt/**",
+                "/decrypt/**",
+                "/actuator/**"
+        );
     }
 
 }
